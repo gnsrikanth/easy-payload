@@ -19,5 +19,4 @@ case $op in
 	2)
 	bash easypayload.sh ;;
 	*)echo "Wrong option!"
-	bash easypayload.sh ;;
 esac
