@@ -4,4 +4,4 @@ I came up with a bash program to make this easy. Just secect and option, enter I
 #EASY TO USE 
 just type "bash easypayload.sh"
 Please make sure that you install METASPLOIT befor you run this Bash script and you have cc compiler.
-#Tested on Kali Linux.
+*Tested on Kali Linux.*
