@@ -8,7 +8,7 @@ read op1
 		
 case $op1 in
       #payload folder	
-	1) cd payload 
+	1) cd payloads 
 	cc payload.c
 	./a.out;;
      #exploit folder
