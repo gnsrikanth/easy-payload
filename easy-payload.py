@@ -10,7 +10,7 @@ while True:
 		generate()
 	elif option == '2':
 		listner()
-	elif option == 3':
+	elif option == '3':
 		os.system('rm output/*')
 	else:
 		print('Wrong option')
